@@ -28,6 +28,8 @@ int main() {
 
     dichotomie(liste_medic, nb_medic);
 
+    prixMax(liste_medic, nb_medic);
+
     if (liste_medic != NULL) {
         for (int i = 0; i < nb_medic; i++) {
             if (liste_medic[i] != NULL) {

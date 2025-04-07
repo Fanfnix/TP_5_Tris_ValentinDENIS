@@ -120,3 +120,12 @@ void dichotomie(Medic ** liste_medic, int nb_medic) {
     if (trouve) printf("La valeur %s est au rang %d.\n", val, mil);
     else printf("La valeur %s n'est pas dans le tableau.\n", val);
 }
+
+
+void prixMax(Medic ** liste_medic, int nb_medic) {
+    float max = -1.0f;
+    for (int i = 0; i < nb_medic; i++) {
+        if (liste_medic[i]->prix_unitaire > max) max = liste_medic[i]->prix_unitaire;
+    }
+    printf("Prix max = %.2f€\n", max);
+}

@@ -23,5 +23,6 @@ void afficherListeMedic(Medic ** liste_medic, int nb_medic);
 void tri_a_bulle_optimise(Medic ** liste_medic, int nb_medic);
 int comp(const void * a, const void * b);
 void dichotomie(Medic ** liste_medic, int nb_medic);
+void prixMax(Medic ** liste_medic, int nb_medic);
 
 #endif
