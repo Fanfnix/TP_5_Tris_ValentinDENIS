@@ -130,6 +130,7 @@ void prixMax(Medic ** liste_medic, int nb_medic) {
     printf("Prix max = %.2f€\n", max);
 }
 
+
 void tauxVente(Medic ** liste_medic, int nb_medic) {
     int stocks = 0;
     int ventes = 0;
@@ -139,4 +140,10 @@ void tauxVente(Medic ** liste_medic, int nb_medic) {
     }
     float taux = (float)stocks / (float)(stocks + ventes);
     printf("Taux = %.0f%%\n", 100*taux);
+}
+
+
+void triChaine(Chaine * premier) {
+    Chaine * premier_tmp = premier;
+    while ()
 }
