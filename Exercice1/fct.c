@@ -129,3 +129,14 @@ void prixMax(Medic ** liste_medic, int nb_medic) {
     }
     printf("Prix max = %.2f€\n", max);
 }
+
+void tauxVente(Medic ** liste_medic, int nb_medic) {
+    int stocks = 0;
+    int ventes = 0;
+    for (int i = 0; i < nb_medic; i++) {
+        stocks += liste_medic[i]->nb_stock;
+        ventes += liste_medic[i]->nb_vendues;
+    }
+    float taux = (float)stocks / (float)(stocks + ventes);
+    printf("Taux = %.0f%%\n", 100*taux);
+}
