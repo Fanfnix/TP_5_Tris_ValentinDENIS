@@ -3,6 +3,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 typedef struct Mecicament {
     char nom[50];
@@ -20,5 +21,7 @@ void afficherMedic(Medic * medoc);
 void afficherListeMedic(Medic ** liste_medic, int nb_medic);
 
 void tri_a_bulle_optimise(Medic ** liste_medic, int nb_medic);
+int comp(const void * a, const void * b);
+void dichotomie(Medic ** liste_medic, int nb_medic);
 
 #endif

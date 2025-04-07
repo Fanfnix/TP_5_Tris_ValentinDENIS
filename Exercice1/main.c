@@ -22,6 +22,12 @@ int main() {
 
     afficherListeMedic(liste_medic, nb_medic);
 
+    qsort(liste_medic, nb_medic, sizeof(Medic *), comp);
+
+    afficherListeMedic(liste_medic, nb_medic);
+
+    dichotomie(liste_medic, nb_medic);
+
     if (liste_medic != NULL) {
         for (int i = 0; i < nb_medic; i++) {
             if (liste_medic[i] != NULL) {

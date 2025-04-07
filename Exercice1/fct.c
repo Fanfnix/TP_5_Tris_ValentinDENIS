@@ -90,3 +90,33 @@ void tri_a_bulle_optimise(Medic ** liste_medic, int nb_medic) {
         if (!swapped) break;
     }
 }
+
+
+int comp(const void * a, const void * b) {
+    char * pa = &((Medic*)a)->nom[0];
+    char * pb = &((Medic*)b)->nom[0];
+    if (*pa > *pb) return 1;
+    else if (*pa < *pb) return -1;
+    else return 0;
+}
+
+
+void dichotomie(Medic ** liste_medic, int nb_medic) {
+    int debut, fin, mil, trouve;
+    char val[] = "paracetamol";
+
+    debut = 0;
+    fin = nb_medic-1;
+    trouve = 0;
+
+    while (!trouve && debut <= fin) {
+        mil = (int)((debut+fin)/2);
+        if (strcmp(liste_medic[mil]->nom, val) == 0) trouve = 1;
+        else {
+            if (strcmp(liste_medic[mil]->nom, val) == -1) debut = mil+1;
+            else fin = mil-1;
+        }
+    }
+    if (trouve) printf("La valeur %s est au rang %d.\n", val, mil);
+    else printf("La valeur %s n'est pas dans le tableau.\n", val);
+}
